@@ -25,9 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 min-h-screen`}
       >
-        {children}
+        {/** Barra de navegación global */}
+        {require('../components/Navbar').default()}
+        <main className="pt-8">
+          {children}
+        </main>
       </body>
     </html>
   );
